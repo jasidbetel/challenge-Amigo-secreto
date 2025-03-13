@@ -2,6 +2,18 @@
 
 let amigos = []
 
-function AgregarAmigos() {
-    
+function agregarAmigo() {
+    let ingresarUsuario = document.getElementById('amigo');
+    let nombreUsuario = ingresarUsuario.value.trim();
+
+    if (nombreUsuario === "" ) {
+        alert("por favor, inserte un nombre");
+        return;
+    } 
+
+    amigos.push(nombreUsuario);
+    ingresarUsuario.value = "";
+
+    console.log(amigos);
 }
+
