@@ -14,6 +14,21 @@ function agregarAmigo() {
     amigos.push(nombreUsuario);
     ingresarUsuario.value = "";
 
-    console.log(amigos);
+    
+}
+
+function sortearAmigo() {
+    
+    if (amigos.length === 0) {
+        alert("no hay nombres en la lista, por favor digite algunos nombres ");
+        return;
+    }
+
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indiceAleatorio];
+
+    let resultadoElemento = document.getElementById('resultado');
+    resultadoElemento.innerHTML = `<li>El amigo secreto es: <strong>${amigoSorteado}</strong></li>`;
+
 }
 
